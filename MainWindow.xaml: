@@ -1,0 +1,29 @@
+<Window x:Class="TextMindPro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TextMindPro" Height="600" Width="800">
+  <Grid>
+    <DockPanel>
+      <Menu DockPanel.Dock="Top">
+        <MenuItem Header="Archivo">
+          <MenuItem Header="Abrir" Click="OpenFile_Click" />
+          <MenuItem Header="Guardar" Click="SaveFile_Click" />
+          <Separator />
+          <MenuItem Header="Salir" Click="Exit_Click" />
+        </MenuItem>
+        <MenuItem Header="Editar">
+          <MenuItem Header="Deshacer" Click="Undo_Click" />
+          <MenuItem Header="Rehacer" Click="Redo_Click" />
+          <Separator />
+          <MenuItem Header="Insertar Tabla" Click="InsertTable_Click" />
+          <MenuItem Header="Insertar Imagen" Click="InsertImage_Click" />
+        </MenuItem>
+        <MenuItem Header="IA">
+          <MenuItem Header="Verificar Gramática" Click="CheckGrammar_Click" />
+          <MenuItem Header="Generar Sugerencias" Click="GenerateSuggestions_Click" />
+        </MenuItem>
+      </Menu>
+      <RichTextBox Name="richTextBoxEditor" AcceptsTab="True" />
+    </DockPanel>
+  </Grid>
+</Window>
